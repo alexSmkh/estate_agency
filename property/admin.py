@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Flat
+from .models import Flat, Complaint
 
 
 class PriceListFilter(admin.SimpleListFilter):
@@ -77,3 +77,8 @@ class FlatAdmin(admin.ModelAdmin):
         LivingAreaListFilter,
         PriceListFilter
     )
+
+
+@admin.register(Complaint)
+class ComplaintAdmin(admin.ModelAdmin):
+    raw_id_fields = ('user', 'flat')

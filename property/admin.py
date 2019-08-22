@@ -75,8 +75,9 @@ class FlatAdmin(admin.ModelAdmin):
         'has_balcony',
         'rooms_number',
         LivingAreaListFilter,
-        PriceListFilter
+        PriceListFilter,
     )
+    raw_id_fields = ('liked_by',)
 
 
 @admin.register(Complaint)

@@ -63,9 +63,14 @@ class LivingAreaListFilter(admin.SimpleListFilter):
 @admin.register(Flat)
 class FlatAdmin(admin.ModelAdmin):
     search_fields = ('owner', 'town', 'address')
-    readonly_fields = ('created_at',)
+    readonly_fields = ('created_at', 'liked_by')
     list_display = (
-        'address', 'price', 'new_building', 'construction_year', 'town'
+        'address',
+        'price',
+        'new_building',
+        'construction_year',
+        'town',
+        'owner_phone_pure'
     )
     list_editable = ('new_building',)
     list_filter = (

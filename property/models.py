@@ -33,7 +33,8 @@ class Flat(models.Model):
             (None, 'Не заполнено'),
             (True, 'Новостройка'),
             (False, 'Старое здание')
-        )
+        ),
+        db_index=True
     )
 
     def __str__(self):

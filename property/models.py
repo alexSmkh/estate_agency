@@ -28,6 +28,7 @@ class Flat(models.Model):
         blank=True
     )
     new_building = models.NullBooleanField(
+        'Тип постройки',
         choices=(
             (None, 'Не заполнено'),
             (True, 'Новостройка'),
